@@ -1,0 +1,23 @@
+= README — workspace-agent (Long Island)
+:toc:
+
+== Cockpit Agentique IntelliJ — Plugin JetBrains Platform
+
+*N-IDE* — Poste de pilotage du développement assisté par IA.
+
+5 dashboards :
+- Conso tokens
+- Knowledge Graph (SQL + graphify)
+- Historique opencode
+- RAG Context
+- LangGraph Chain Monitor
+
+Actions IA menu contextuel : Generate, Explain, Document, Refactor Suggest, Fix Error.
+
+*Méthode* : 7 ateliers de cadrage agile → code (source : `office/sites/cheroliv.com/jbake/content/blog/2022/0054_memo_cadrage_post.adoc`)
+
+*Voir document de vision* : `COCKPIT_VISION.adoc` (racine workspace)
+*EPICs* : IJ-0→IJ-7 (8 EPICs, 79 pts)
+
+*GroupId* : `cccp.education.intellij`
+*Licence* : Apache 2.0
