@@ -19,5 +19,5 @@ Actions IA menu contextuel : Generate, Explain, Document, Refactor Suggest, Fix 
 *Voir document de vision* : `COCKPIT_VISION.adoc` (racine workspace)
 *EPICs* : IJ-0→IJ-7 (8 EPICs, 79 pts)
 
-*GroupId* : `cccp.education.intellij`
+*GroupId* : `education.cccp.intellij`
 *Licence* : Apache 2.0
