@@ -1,0 +1,20 @@
+= PROMPT_REPRISE — workspace-agent Session 001
+:session: 001
+:date: 2026-05-27
+:contexte: Session 000 TERMINEE — Cadrage vision + architecture (COCKPIT_VISION.adoc)
+:prerequis: 8 EPICs IJ-0→IJ-7 (79 pts), méthode 7 ateliers cadrage agile
+
+== What was delivered (Session 000)
+
+- README.adoc — description cockpit agentique
+- COCKPIT_VISION.adoc (racine workspace) — vision 5 dashboards
+- 8 EPICs cadrés : IJ-0→IJ-7
+
+== Objective Session 001
+
+- Bootstrap projet Gradle IntelliJ Platform Plugin
+- settings.gradle.kts + build.gradle.kts
+- src/main/kotlin/education/cccp/intellij/workspaceagent/ structure
+- Premier test vide qui compile
+
+Code in: intellij-plugins/workspace-agent/

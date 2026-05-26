@@ -1,0 +1,15 @@
+= Test Coverage Analysis — workspace-agent
+
+_Statut session 000_ : Cadrage seulement. Aucun test.
+
+| Session | Fichiers testes | Couverture | Notes
+| 000 | Aucun | N/A | Cadrage vision + architecture
+|===
+
+== Modules
+
+Aucun pour l'instant — projet en phase de bootstrap (session 001).
+
+== Prochaine etape
+
+Session 001 — Bootstrap Gradle IntelliJ Platform Plugin + premier test vide.

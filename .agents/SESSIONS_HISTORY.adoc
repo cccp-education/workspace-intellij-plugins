@@ -1,0 +1,6 @@
+= Sessions History — workspace-agent
+
+|===
+| # | Date | Type | Sujet | Score
+| 000 | 2026-05-18 | cadrage | Cadrage vision + architecture cockpit agentique IntelliJ (N-IDE) — 8 EPICs IJ-0→IJ-7 (79 pts), methode 7 ateliers cadrage agile | 10/10
+|===

@@ -1,0 +1,126 @@
+= AGENT — workspace-agent (Long Island)
+:toc:
+:icons: font
+
+== Projet
+
+**Nom** : workspace-agent — Cockpit Agentique IntelliJ (N-IDE)
+**Stack** : Kotlin, IntelliJ Platform Plugin SDK, Gradle, koog+langchain4j, PSI, RAG
+**GroupId** : education.cccp.intellij
+**Licence** : Apache 2.0
+**Document de vision** : COCKPIT_VISION.adoc (racine workspace)
+
+=== Objectif
+
+Plugin JetBrains Platform pour le poste de pilotage du développement assisté par IA.
+
+5 dashboards :
+- Conso tokens
+- Knowledge Graph (SQL + graphify)
+- Historique sessions opencode
+- RAG Context
+- Chain Monitor koog
+
+Actions IA menu contextuel : Generate, Explain, Document, Refactor Suggest, Fix Error.
+
+== Règles Absolues
+
+=== Git
+
+**INTERDICTION FORMELLE** de commit/push/merge sans permission explicite.
+
+Commandes autorisées (lecture seule) : `git status`, `git diff`, `git log`, `git show`
+Commandes interdites (sauf ordre) : `git add`, `git commit`, `git push`, `git merge`, `git rebase`
+
+=== Tests
+
+L'agent NE DOIT JAMAIS lancer de tests en fin de session SANS permission explicite.
+
+=== Secrets
+
+* Jamais de secrets en dur dans le code
+* Jamais de credentials dans les fichiers de config
+* Jamais de tokens API commités dans Git
+
+=== Fichiers de configuration
+
+* Backup obligatoire avant modification d'un fichier non versionné
+* Privilégier `Edit` (partiel) plutôt que `Write` (écrasement)
+
+=== Méthodologie
+
+* **TDD/BDD/DDD en baby steps** — test unitaire → fonctionnel → Cucumber
+* **Clean Architecture + Clean Code** — pas de shortcuts
+* **SÉQUENTIEL PUR** — interdiction de @xp, subagents, parallélisation
+* **1 fichier à la fois** — modifier, compiler, tester, puis passer au suivant
+
+== Architecture du Projet
+
+[source,bash]
+----
+intellij-plugins/workspace-agent/
+├── build.gradle.kts
+├── settings.gradle.kts
+├── gradlew / gradlew.bat
+├── AGENT.adoc
+├── PROMPT_REPRISE.adoc
+├── README.adoc
+├── .gitignore
+├── .agents/
+│   ├── INDEX.adoc
+│   ├── SESSION_CHECKLIST.adoc
+│   ├── SESSIONS_HISTORY.adoc
+│   ├── TEST_COVERAGE_ANALYSIS.adoc
+│   ├── sessions/
+│   ├── archives/
+│   ├── encyclopedies/
+│   └── backup/
+└── src/
+    ├── main/
+    │   ├── kotlin/
+    │   └── resources/
+    └── test/
+        ├── kotlin/
+        └── resources/
+----
+
+== EPICs
+
+[cols="1,3,2,2"]
+|===
+| EPIC | Description | Statut | Priorité
+| IJ-0 | Cadrage vision + Architecture | ✅ Session 000 | P0
+| IJ-1 | Bootstrap plugin IntelliJ Platform | À faire | P0
+| IJ-2 | Dashboard conso tokens | À faire | P1
+| IJ-3 | Dashboard Knowledge Graph | À faire | P1
+| IJ-4 | Dashboard historique sessions | À faire | P2
+| IJ-5 | Dashboard RAG Context | À faire | P2
+| IJ-6 | Chain Monitor koog | À faire | P2
+| IJ-7 | Actions IA menu contextuel | À faire | P2
+|===
+
+== Fichiers EAGER
+
+|===
+| Fichier | Rôle
+| `PROMPT_REPRISE.adoc` | Mission session en cours
+| `.agents/INDEX.adoc` | Règles absolues + roadmap + portefeuille
+| `.agents/SESSION_CHECKLIST.adoc` | Checklist ouverture/fermeture
+| `AGENT.adoc` | Ce fichier — Directives complètes
+|===
+
+== Convention de Code
+
+* Kotlin idiomatique, pas de commentaires sauf demande
+* Tests : JUnit5 + Cucumber BDD
+* Documentation : AsciiDoc (.adoc) uniquement
+
+== Anti-Patterns
+
+[cols="1,3,3,3"]
+|===
+| # | Anti-pattern | Symptôme | Correction
+| 1 | Agent sans AGENT.adoc | Pas de règles chargées | Toujours vérifier que AGENT.adoc existe et est EAGER
+| 2 | Session trop longue | > 50 messages ou > 3 fichiers | Splitter
+| 3 | PROMPT_REPRISE fantôme | Pas mis à jour en fin de session | Étape 2 obligatoire
+|===
