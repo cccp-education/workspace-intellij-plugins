@@ -14,6 +14,12 @@
 
 Plugin JetBrains Platform pour le poste de pilotage du développement assisté par IA.
 
+*Portée actée (décision pilote 2026-09-17)* : le plugin *pilote ET observe*.
+- *Observer* — dashboards, visualisation de l'output, arbre des sessions,
+  inspection des structures de données (graphes, plans, backlogs, sorties de tâches).
+- *Piloter* — lancer des tâches Gradle (Tooling API), ouvrir/fermer des sessions,
+  manipuler visuellement les structures. Le plugin *propose*, l'humain *valide*.
+
 5 dashboards :
 - Conso tokens
 - Knowledge Graph (SQL + graphify)
@@ -27,10 +33,12 @@ Actions IA menu contextuel : Generate, Explain, Document, Refactor Suggest, Fix 
 
 === Git
 
-**INTERDICTION FORMELLE** de commit/push/merge sans permission explicite.
+Commit/push/merge **autorisés** (décision pilote 2026-09-17 — suppression de
+l'interdiction formelle).
 
-Commandes autorisées (lecture seule) : `git status`, `git diff`, `git log`, `git show`
-Commandes interdites (sauf ordre) : `git add`, `git commit`, `git push`, `git merge`, `git rebase`
+Lecture seule toujours autorisée : `git status`, `git diff`, `git log`, `git show`
+
+*Seule limite* : ne JAMAIS commiter de secret.
 
 === Tests
 
@@ -51,8 +59,11 @@ L'agent NE DOIT JAMAIS lancer de tests en fin de session SANS permission explici
 
 * **TDD/BDD/DDD en baby steps** — test unitaire → fonctionnel → Cucumber
 * **Clean Architecture + Clean Code** — pas de shortcuts
-* **SÉQUENTIEL PUR** — interdiction de @xp, subagents, parallélisation
+* **Parallélisation autorisée** — @xp, subagents et sessions concurrentes sont
+  des outils légitimes (décision pilote 2026-09-17 — la règle « SÉQUENTIEL PUR »
+  est supprimée de l'écosystème)
 * **1 fichier à la fois** — modifier, compiler, tester, puis passer au suivant
+  (discipline de travail recommandée, non une interdiction de paralléliser)
 
 == Architecture du Projet
 
