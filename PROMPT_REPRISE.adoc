@@ -1,20 +1,46 @@
 = PROMPT_REPRISE — workspace-agent Session 001
 :session: 001
-:date: 2026-05-27
-:contexte: Session 000 TERMINEE — Cadrage vision + architecture (COCKPIT_VISION.adoc)
-:prerequis: 8 EPICs IJ-0→IJ-7 (79 pts), méthode 7 ateliers cadrage agile
+:date: 2026-09-17
+:statut: BOROUGH PARKÉ — aucune session planifiée
 
-== What was delivered (Session 000)
+== Statut
 
-- README.adoc — description cockpit agentique
-- COCKPIT_VISION.adoc (racine workspace) — vision 5 dashboards
-- 8 EPICs cadrés : IJ-0→IJ-7
+*Le chantier cockpit IntelliJ est ABANDONNÉ* (décision pilote 2026-09-17).
+Motif : trop de travail pour peu de bénéfice. Vision v1 (79 pts, 8 EPICs)
+disproportionnée par rapport au service rendu attendu ; zéro ligne de code
+produite en 4 mois.
 
-== Objective Session 001
+Détail de la décision : `.agents/sessions/001-abandon-cockpit-intellij.adoc`.
 
-- Bootstrap projet Gradle IntelliJ Platform Plugin
-- settings.gradle.kts + build.gradle.kts
-- src/main/kotlin/education/cccp/intellij/workspaceagent/ structure
-- Premier test vide qui compile
+== Conséquence pratique
 
-Code in: intellij-plugins/workspace-agent/
+*Ne PAS rouvrir ce chantier sans demande explicite du pilote.*
+
+Le besoin exprimé en séance (plan de contrôle du workspace : observer 30
+boroughs, lancer des sessions opencode concurrentes, inspecter les outputs,
+manipuler visuellement des structures) n'est PAS adressé ici. S'il revient,
+il se recadre *ex nihilo* à partir du besoin — et non à partir de
+`COCKPIT_VISION.adoc` ou des EPICs IJ-* (caduques).
+
+== Si le besoin multi-sessions revient — piste de recadrage
+
+Ce qui manquerait, dans l'ordre (contrats avant UI) :
+
+. *Registre de sessions* — {session, borough, worktree/branche, EPIC,
+  statut `running | waiting-human | blocked | done`}. Aujourd'hui éclaté
+  entre `.agents/*.adoc` et `~/.local/share/opencode/opencode.db`.
+. *Read model unifié* — clé commune entre `dashboard-data.json` (ALGER),
+  `graph.json` (graphify) et les session records.
+. *Protocole d'action* — lancer/attacher/reprendre une session opencode
+  headless ; ouvrir l'output d'une tâche (JUnit XML, `cucumberTest*`).
+. *Front-end* — le moins cher d'abord (console locale), l'IntelliJ
+  seulement si le PSI apporte une valeur unique (édition structurée sûre).
+
+Chantiers existants à ne PAS dupliquer : ALGER (`dashboard-gradle`),
+Brooklin Flow (`graph.json`), `codebase.koog.tracking`, `workspace-gradle/pilot`.
+Frontière à respecter : GBL-004 (interactif avec état = privé/Edster).
+
+== Contenu du borough (conservé, non modifié)
+
+Gouvernance + LICENSE uniquement. Aucun `.kts`, aucun `.kt`, aucun test.
+`COCKPIT_VISION.adoc` (racine workspace) conservé pour traçabilité.

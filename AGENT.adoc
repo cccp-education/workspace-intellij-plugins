@@ -95,19 +95,31 @@ intellij-plugins/workspace-agent/
         └── resources/
 ----
 
-== EPICs
+== Statut du Borough — PARKÉ (décision pilote 2026-09-17)
+
+*Le chantier cockpit IntelliJ est ABANDONNÉ avant le premier incrément.*
+Motif : trop de travail pour peu de bénéfice. La vision v1 (79 pts) divergeait
+du besoin réel (plan de contrôle du workspace) et aucun code n'a été produit
+en 4 mois. Détail : `.agents/sessions/001-abandon-cockpit-intellij.adoc`.
+
+*Conséquence pratique* : ne PAS rouvrir ce chantier sans demande explicite du
+pilote. Le besoin multi-sessions, s'il revient, se recadre ex nihilo à partir
+du besoin (registre de sessions + read model unifié), jamais à partir des
+EPICs ci-dessous. Les documents existants sont conservés pour traçabilité.
+
+== EPICs (CADUQUES — conservés pour traçabilité)
 
 [cols="1,3,2,2"]
 |===
 | EPIC | Description | Statut | Priorité
 | IJ-0 | Cadrage vision + Architecture | ✅ Session 000 | P0
-| IJ-1 | Bootstrap plugin IntelliJ Platform | À faire | P0
-| IJ-2 | Dashboard conso tokens | À faire | P1
-| IJ-3 | Dashboard Knowledge Graph | À faire | P1
-| IJ-4 | Dashboard historique sessions | À faire | P2
-| IJ-5 | Dashboard RAG Context | À faire | P2
-| IJ-6 | Chain Monitor koog | À faire | P2
-| IJ-7 | Actions IA menu contextuel | À faire | P2
+| IJ-1 | Bootstrap plugin IntelliJ Platform | ✅ CADUQUE (S-001) | P0
+| IJ-2 | Dashboard conso tokens | ✅ CADUQUE (S-001) | P1
+| IJ-3 | Dashboard Knowledge Graph | ✅ CADUQUE (S-001) | P1
+| IJ-4 | Dashboard historique sessions | ✅ CADUQUE (S-001) | P2
+| IJ-5 | Dashboard RAG Context | ✅ CADUQUE (S-001) | P2
+| IJ-6 | Chain Monitor koog | ✅ CADUQUE (S-001) | P2
+| IJ-7 | Actions IA menu contextuel | ✅ CADUQUE (S-001) | P2
 |===
 
 == Fichiers EAGER

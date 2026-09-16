@@ -2,33 +2,45 @@
 
 _Regles absolues_ : voir `AGENT.adoc`
 
-_Derniere mise a jour_ : 2026-05-27 (Session 000)
-_Session en cours_ : 001 — Bootstrap projet Gradle IntelliJ Platform Plugin
-_Prochaine session_ : 001 — settings.gradle.kts + build.gradle.kts + structure src/
+_Derniere mise a jour_ : 2026-09-17 (Session 001)
+_Session en cours_ : — (aucune)
+_Prochaine session_ : — (borough PARKÉ, aucune session planifiee)
+
+'''
+
+== STATUT DU BOROUGH — PARKÉ (decision pilote 2026-09-17)
+
+*Le chantier cockpit IntelliJ est ABANDONNÉ.* Motif : trop de travail pour peu
+de benefice. La vision v1 (79 pts) divergeait du besoin reel et aucun code n'a
+ete produit en 4 mois. Detail : `.agents/sessions/001-abandon-cockpit-intellij.adoc`.
+
+*Ne PAS rouvrir sans demande explicite du pilote.* Le besoin multi-sessions,
+s'il revient, se recadre ex nihilo (registre de sessions + read model unifie),
+jamais a partir des EPICs ci-dessous.
 
 '''
 
 == REGLES ABSOLUES (resume)
 
 === 0. TESTS EN FIN DE SESSION — INTERDICTION FORMELLE
-=== 1. COMMITS/GIT — INTERDICTION FORMELLE sans permission
-=== 2. PROCEDURE DE FIN DE SESSION — 6 ETAPES OBLIGATOIRES
+=== 1. COMMITS/GIT — autorises (decision 2026-09-17), zero secret commite
+=== 2. PROCEDURE DE FIN DE SESSION — 7 ETAPES OBLIGATOIRES
 
 '''
 
-== EPICs
+== EPICs (CADUQUES — conserves pour tracabilite)
 
 [cols="1,3,2,2", options="header"]
 |===
 | EPIC | Description | Statut | Priorite
 | IJ-0 | Cadrage vision + Architecture (COCKPIT_VISION.adoc) | ✅ Session 000 | P0
-| IJ-1 | Bootstrap plugin IntelliJ Platform | A faire (session 001) | P0
-| IJ-2 | Dashboard conso tokens | A faire | P1
-| IJ-3 | Dashboard Knowledge Graph (SQL + graphify) | A faire | P1
-| IJ-4 | Dashboard historique sessions opencode | A faire | P2
-| IJ-5 | Dashboard RAG Context | A faire | P2
-| IJ-6 | Chain Monitor koog | A faire | P2
-| IJ-7 | Actions IA menu contextuel (Generate, Explain, Document, Refactor, Fix) | A faire | P2
+| IJ-1 | Bootstrap plugin IntelliJ Platform | ✅ CADUQUE (S-001) | P0
+| IJ-2 | Dashboard conso tokens | ✅ CADUQUE (S-001) | P1
+| IJ-3 | Dashboard Knowledge Graph (SQL + graphify) | ✅ CADUQUE (S-001) | P1
+| IJ-4 | Dashboard historique sessions opencode | ✅ CADUQUE (S-001) | P2
+| IJ-5 | Dashboard RAG Context | ✅ CADUQUE (S-001) | P2
+| IJ-6 | Chain Monitor koog | ✅ CADUQUE (S-001) | P2
+| IJ-7 | Actions IA menu contextuel (Generate, Explain, Document, Refactor, Fix) | ✅ CADUQUE (S-001) | P2
 |===
 
 '''
@@ -38,6 +50,7 @@ _Prochaine session_ : 001 — settings.gradle.kts + build.gradle.kts + structure
 |===
 | # | Date | Type | Sujet | Score
 | 000 | 2026-05-18 | cadrage | Cadrage vision + architecture cockpit agentique IntelliJ (N-IDE) | 10/10
+| 001 | 2026-09-17 | gouvernance | Abandon du cockpit IntelliJ (decision pilote — trop de travail pour peu de benefice) | 10/10
 |===
 
 '''

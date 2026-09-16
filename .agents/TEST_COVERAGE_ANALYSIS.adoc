@@ -1,15 +1,17 @@
 = Test Coverage Analysis — workspace-agent
 
-_Statut session 000_ : Cadrage seulement. Aucun test.
+_Statut session 001_ : Borough PARKÉ — aucun test, aucun code.
 
 | Session | Fichiers testes | Couverture | Notes
 | 000 | Aucun | N/A | Cadrage vision + architecture
+| 001 | Aucun | N/A | Abandon du chantier (gouvernance pure)
 |===
 
 == Modules
 
-Aucun pour l'instant — projet en phase de bootstrap (session 001).
+Aucun. Le projet n'a jamais dépassé le squelette de gouvernance.
 
-== Prochaine etape
+== Statut
 
-Session 001 — Bootstrap Gradle IntelliJ Platform Plugin + premier test vide.
+Borough PARKÉ (décision pilote 2026-09-17). Aucun bootstrap Gradle ne sera
+realise. `.agents/sessions/001-abandon-cockpit-intellij.adoc`.
