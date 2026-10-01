@@ -5,3 +5,4 @@
 | 000 | 2026-05-18 | cadrage | Cadrage vision + architecture cockpit agentique IntelliJ (N-IDE) — 8 EPICs IJ-0→IJ-7 (79 pts), methode 7 ateliers cadrage agile | 10/10
 | 001 | 2026-09-17 | gouvernance | Abandon du cockpit IntelliJ (decision pilote — trop de travail pour peu de benefice). EPICs IJ-1→IJ-7 CADUQUES. Borough PARKÉ. Aucun code produit. | 10/10
 |===
+
